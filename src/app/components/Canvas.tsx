@@ -22,7 +22,6 @@ export default function Canvas({ setAnalysisResult, setIsLoading }: CanvasProps)
   const [history, setHistory] = useState<string[]>([]);
   const [redoStack, setRedoStack] = useState<string[]>([]);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [analysisResult, setLocalAnalysisResult] = useState<string>("");
   const fileInputRef = useRef<HTMLInputElement>(null);
 
 
@@ -274,7 +273,7 @@ export default function Canvas({ setAnalysisResult, setIsLoading }: CanvasProps)
         ]);
 
         const response = await result.response;
-        setLocalAnalysisResult(response.text());
+        // setLocalAnalysisResult(response.text());
         setAnalysisResult(response.text()); // Pass result to the parent
         console.log(response.text());
         setIsAnalyzing(false);
@@ -340,11 +339,6 @@ export default function Canvas({ setAnalysisResult, setIsLoading }: CanvasProps)
           onTouchMove={draw}
         />
         
-        {/* {isAnalyzing && (
-          <div className="mt-4 p-4 bg-white rounded-md w-full max-w-2xl">
-            <p>Your Query Is Running...</p>
-          </div>
-        )} */}
       </div>
     </main>
   );

@@ -37,7 +37,7 @@ export default function Home() {
                     rehypePlugins={[rehypeKatex]}
                     components={{
                       // Custom component for rendering code blocks
-                      code({ node, className, children, ...props }) {
+                      code({ className, children, ...props }) {
                         const match = /language-(\w+)/.exec(className || '');
                         return !match ? (
                           <code className={className} {...props}>
