@@ -18,15 +18,15 @@ export default function Home() {
       </header>
 
       {/* Main Content */}
-      <main className="flex flex-col md:flex-row flex-grow justify-items-center items-stretch">
+      <main className="flex flex-col md:flex-row flex-grow justify-items-center bg-slate-950 items-stretch">
         {/* Canvas Container */}
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center touch-none">
           <Canvas setAnalysisResult={setAnalysisResult} setIsLoading={setIsLoading} />
         </div>
 
         {/* Text Container */}
-        <div className="md:w-1/2 w-full max-h-60 md:max-h-screen md:h-full flex items-center justify-center mr-5">
-          <div className="w-full overflow-y-auto h-full md:h-3/4 m-4 flex flex-col bg-gray-900 border border-gray-700 rounded-lg">
+        <div className="md:w-1/2 w-full mb-2 md:max-h-screen md:h-full flex items-center justify-center mr-5">
+          <div className="w-full max-h-60 md:max-h-none overflow-y-auto h-full md:h-3/4 m-4 flex flex-col bg-gray-900 border border-gray-700 rounded-lg">
             <h1 className="text-gray-600 text-2xl justify-start ml-2 mt-2">Solution:</h1>
             {isLoading ? (
               <LoadingSpinner />
@@ -63,7 +63,7 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="w-full bg-slate-800 font-mono text-white py-3 text-center">
+      <footer className="w-full bg-slate-800 font-mono text-white py-3 text-center ">
         <p className="text-sm uppercase">web-app built by dtrixprem</p>
       </footer>
     </div>

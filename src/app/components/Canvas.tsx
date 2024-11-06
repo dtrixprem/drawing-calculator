@@ -329,7 +329,7 @@ export default function Canvas({ setAnalysisResult, setIsLoading }: CanvasProps)
         <canvas
           ref={canvasRef}
           id="canvas"
-          className="rounded mt-4"
+          className="rounded mt-4 touch-none overscroll-none overflow overflow-hidden"
           onMouseDown={startDrawing}
           onMouseOut={stopDrawing}
           onMouseUp={stopDrawing}
